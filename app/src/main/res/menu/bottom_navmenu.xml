@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Hotlines"
+
+        android:id="@+id/hotlines_botnav"
+        android:icon="@drawable/hotline"/>
+    <item android:title="Home"
+        android:id="@+id/home_botnav"
+        android:icon="@drawable/home"/>
+    <item android:title="Training Manual"
+        android:id="@+id/manual_botnav"
+        android:icon="@drawable/manual2"/>
+</menu>

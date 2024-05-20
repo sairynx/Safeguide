@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_disaster"
+            android:icon="@drawable/module"
+            android:title="Disaster / Calamity Module" />
+        <item
+            android:id="@+id/nav_go_bag"
+            android:icon="@drawable/go_bag"
+            android:title="Emergency Go Bag" />
+        <item
+            android:id="@+id/nav_univ_map"
+            android:icon="@drawable/univ_map"
+            android:title="University Evacuation Map" />
+
+
+
+    </group>
+    <item
+        android:title="">
+
+        <menu>
+
+          <item
+            android:id="@+id/nav_info_about"
+            android:icon="@drawable/nav_info_about"
+            android:title="About Us" />
+
+        </menu>
+    </item>
+
+</menu>

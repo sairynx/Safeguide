@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Safeguide 1</string>
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
+    <string name="safeguide">SafeGuide</string>
+    <string name="start">START</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="greeting_message_description">Greeting message for the user</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tsk">ggg</string>
+
+    <string name="view_evacuation_map">View evacuation map</string>
+    <string name="Paragraph_1">This is a gentle reminder that, while our emergency preparedness application is a useful tool for users, it is crucial to understand its purpose properly. Our software is intended to assist users in navigating before, during, and after a disaster, providing vital guidelines and resources for safety and recovery.</string>
+    <string name="Paragraph_2">However, it is important to understand that the application alone cannot save lives. Instead, it provides users with information and direction to help them make informed decisions and take appropriate action in times of crisis.</string>
+    <string name="Paragraph_3">Remember, preparation is essential. Stay informed, plan  ahead, and utilize our app as a resource to help you prepare for any emergency.</string>
+
+
+<string-array name="itemTexts">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+        <item>Item 5</item>
+        <item>Item 6</item>
+        <item>Item 7</item>
+        <item>Item 8</item>
+        <item>Item 9</item>
+        <item>Item 10</item>
+    </string-array>
+    <string-array name="itemTexts2">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+    </string-array>
+    <string-array name="itemTexts3">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+        <item>Item 5</item>
+    </string-array>
+    <string-array name="itemTexts4">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+        <item>Item 5</item>
+        <item>Item 6</item>
+        <item>Item 7</item>
+    </string-array>
+    <string-array name="itemTexts5">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+        <item>Item 5</item>
+        <item>Item 6</item>
+        <item>Item 7</item>
+        <item>Item 8</item>
+    </string-array>
+
+
+</resources>

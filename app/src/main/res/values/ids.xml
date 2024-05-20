@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btnImport" type="id" />
+    <item name="recyclerViewMyBag" type="id" />
+    <item name="btnAdd" type="id" />
+    <item name="btnImportSelected" type="id" />
+    <item name="textViewItem" type="id" />
+    <item name="btnRemove" type="id" />
+</resources>

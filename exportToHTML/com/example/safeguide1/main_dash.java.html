@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>main_dash.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main_dash.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.safeguide1</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">androidx.annotation.NonNull</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">androidx.appcompat.app.AppCompatActivity</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">androidx.appcompat.app.ActionBarDrawerToggle</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">androidx.appcompat.widget.Toolbar</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">androidx.core.view.GravityCompat</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">androidx.drawerlayout.widget.DrawerLayout</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.os.Bundle</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.view.MenuItem</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.Toast</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.ToggleButton</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">com.google.android.material.bottomnavigation.BottomNavigationView</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">com.google.android.material.navigation.NavigationBarView</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">com.google.android.material.navigation.NavigationView</span><span class="s0">;</span>
+<span class="s0">public class </span><span class="s1">main_dash </span><span class="s0">extends </span><span class="s1">AppCompatActivity {</span>
+
+    <span class="s1">BottomNavigationView bottomNavigationView</span><span class="s0">;</span>
+    <span class="s1">DrawerLayout drawerLayout</span><span class="s0">;</span>
+    <span class="s1">NavigationView navigationView</span><span class="s0">;</span>
+    <span class="s1">ActionBarDrawerToggle drawerToggle</span><span class="s0">;</span>
+    <span class="s1">GravityCompat GravityCompat</span><span class="s0">;</span>
+    <span class="s1">HomeFragment homeFragment = </span><span class="s0">new </span><span class="s1">HomeFragment()</span><span class="s0">;</span>
+    <span class="s1">botnav_hotlines botnav_hotlines = </span><span class="s0">new </span><span class="s1">botnav_hotlines()</span><span class="s0">;</span>
+    <span class="s1">botnav_manual botnav_manual = </span><span class="s0">new </span><span class="s1">botnav_manual()</span><span class="s0">;</span>
+    <span class="s1">@Override</span>
+    <span class="s0">public boolean </span><span class="s1">onOptionsItemSelected(@NonNull MenuItem item) {</span>
+        <span class="s0">if </span><span class="s1">(drawerToggle.onOptionsItemSelected(item)) {</span>
+            <span class="s0">return true;</span>
+        <span class="s1">}</span>
+        <span class="s0">return super</span><span class="s1">.onOptionsItemSelected(item)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+
+
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span><span class="s0">;</span>
+        <span class="s1">setContentView(R.layout.activity_main_dash)</span><span class="s0">;</span>
+        <span class="s1">DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout)</span><span class="s0">;</span>
+        <span class="s1">NavigationView navigationView = findViewById(R.id.nav_view)</span><span class="s0">;</span>
+       <span class="s1">bottomNavigationView = findViewById(R.id.bottom_nav_view)</span><span class="s0">;</span>
+        <span class="s1">Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar)</span><span class="s0">;</span>
+        <span class="s1">setSupportActionBar(toolbar)</span><span class="s0">;</span>
+
+        <span class="s1">ActionBarDrawerToggle toggle = </span><span class="s0">new </span><span class="s1">ActionBarDrawerToggle(</span><span class="s0">this, </span><span class="s1">drawerLayout</span><span class="s0">, </span><span class="s1">toolbar</span><span class="s0">, </span><span class="s1">R.string.open</span><span class="s0">, </span><span class="s1">R.string.close)</span><span class="s0">;</span>
+
+        <span class="s1">drawerLayout.addDrawerListener(toggle)</span><span class="s0">;</span>
+        <span class="s1">toggle.syncState()</span><span class="s0">;</span>
+        <span class="s1">getSupportActionBar().setDisplayHomeAsUpEnabled(</span><span class="s0">true</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">getSupportActionBar().setHomeAsUpIndicator(R.drawable.burger)</span><span class="s0">;</span>
+        <span class="s0">if </span><span class="s1">(savedInstanceState == </span><span class="s0">null</span><span class="s1">) {</span>
+            <span class="s1">getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container</span><span class="s0">, new </span><span class="s1">HomeFragment()).commit()</span><span class="s0">;</span>
+            <span class="s1">navigationView.setCheckedItem(R.id.home_botnav)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">navigationView.setNavigationItemSelectedListener(</span><span class="s0">new </span><span class="s1">NavigationView.OnNavigationItemSelectedListener() {</span>
+
+            <span class="s1">@Override</span>
+            <span class="s0">public boolean </span><span class="s1">onNavigationItemSelected(@NonNull MenuItem item) {</span>
+                <span class="s0">switch </span><span class="s1">(item.getItemId()) {</span>
+
+                    <span class="s0">case </span><span class="s1">R.id.nav_settings:</span>
+                        <span class="s1">getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container</span><span class="s0">, new </span><span class="s1">SettingsFragment()).commit()</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+                    <span class="s0">case </span><span class="s1">R.id.nav_centers:</span>
+                        <span class="s1">getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container</span><span class="s0">, new </span><span class="s1">EvacCenterFragment()).commit()</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+                    <span class="s0">case </span><span class="s1">R.id.nav_disaster:</span>
+                        <span class="s1">getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container</span><span class="s0">, new </span><span class="s1">DisasterFragment()).commit()</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+                    <span class="s0">case </span><span class="s1">R.id.nav_facilities:</span>
+                        <span class="s1">getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container</span><span class="s0">, new </span><span class="s1">emgcFaciFragment()).commit()</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+                    <span class="s0">case </span><span class="s1">R.id.nav_go_bag:</span>
+                        <span class="s1">getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container</span><span class="s0">, new </span><span class="s1">GobagFragment()).commit()</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+                    <span class="s0">case </span><span class="s1">R.id.nav_univ_map:</span>
+                        <span class="s1">getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container</span><span class="s0">, new </span><span class="s1">com.example.safeguide1.EvacMapFragment()).commit()</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+                    <span class="s0">case </span><span class="s1">R.id.nav_info_about:</span>
+                        <span class="s1">getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container</span><span class="s0">, new </span><span class="s1">AboutUsFragment()).commit()</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+                    <span class="s0">case </span><span class="s1">R.id.nav_exitapp:</span>
+                        <span class="s1">Toast.makeText(main_dash.</span><span class="s0">this, </span><span class="s2">&quot;Exit App&quot;</span><span class="s0">, </span><span class="s1">Toast.LENGTH_SHORT).show()</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+                <span class="s1">}</span>
+                <span class="s1">drawerLayout.closeDrawer(GravityCompat.START)</span><span class="s0">;</span>
+                <span class="s0">return true;</span>
+
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s0">;</span>
+
+        <span class="s1">bottomNavigationView.setOnItemSelectedListener(</span><span class="s0">new </span><span class="s1">NavigationBarView.OnItemSelectedListener() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public boolean </span><span class="s1">onNavigationItemSelected(@NonNull MenuItem item) {</span>
+            <span class="s0">switch </span><span class="s1">(item.getItemId()) {</span>
+                <span class="s0">case </span><span class="s1">R.id.home_botnav:</span>
+                    <span class="s1">getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container</span><span class="s0">,</span><span class="s1">homeFragment).commit()</span><span class="s0">;</span>
+                    <span class="s0">return true;</span>
+                <span class="s0">case </span><span class="s1">R.id.hotlines_botnav:</span>
+                    <span class="s1">getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container</span><span class="s0">,</span><span class="s1">botnav_hotlines).commit()</span><span class="s0">;</span>
+                    <span class="s0">return true;</span>
+                <span class="s0">case </span><span class="s1">R.id.manual_botnav:</span>
+                    <span class="s1">getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container</span><span class="s0">,</span><span class="s1">botnav_manual).commit()</span><span class="s0">;</span>
+                    <span class="s0">return true;</span>
+            <span class="s1">}</span>
+
+                <span class="s0">return false;</span>
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s0">;</span>
+
+
+
+    <span class="s1">}</span>
+    <span class="s1">@Override</span>
+    <span class="s0">public void </span><span class="s1">onBackPressed() {</span>
+        <span class="s1">DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout)</span><span class="s0">;</span>
+        <span class="s0">if </span><span class="s1">(drawerLayout.isDrawerOpen(GravityCompat.START)) {</span>
+            <span class="s1">drawerLayout.closeDrawer(GravityCompat.START)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">else </span><span class="s1">{</span>
+            <span class="s0">super</span><span class="s1">.onBackPressed()</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+<span class="s1">}</span></pre>
+</body>
+</html>

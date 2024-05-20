@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linear_1"
+        android:layout_width="102dp"
+        android:paddingTop="50dp"
+        android:layout_height="match_parent"
+        android:background="@color/green_100"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Textviewmaprecycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mmbold"
+            android:padding="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="1321321"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+</LinearLayout>
+

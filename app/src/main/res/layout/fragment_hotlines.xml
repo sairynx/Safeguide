@@ -1,0 +1,1260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingBottom="16dp"
+    android:nestedScrollingEnabled="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/greenconstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".botnav_hotlines"
+        tools:ignore="ExtraText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/basta_taas"
+                tools:ignore="ExtraText">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="297dp"
+                        android:layout_height="46dp"
+                        android:layout_marginTop="64dp"
+                        android:fontFamily="@font/mmbold"
+                        android:gravity="center"
+                        android:text="Emergency Hotlines"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.078" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="320dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/mmedium"
+                        android:gravity="center"
+                        android:text="A list of emergency hotlines near Cavite State University - Cavite City Campus"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.494"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2"
+                        app:layout_constraintVertical_bias="0.0" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cons"
+                android:layout_gravity="center_horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linear01"
+                    android:layout_width="332dp"
+                    android:layout_height="340dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@id/linear02"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/hotlines_card1"
+                        android:layout_width="151dp"
+                        android:layout_height="318dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/medyowhite"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_max="wrap"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <RelativeLayout
+                            android:id="@+id/hotlineslayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="318dp"
+                            android:animationCache="true">
+
+                            <TextView
+                                android:id="@+id/Hotlines_txt1"
+                                android:layout_width="120dp"
+                                android:layout_height="23dp"
+                                android:layout_alignStart="@+id/hotlines_img1"
+                                android:layout_alignEnd="@+id/hotlines_img1"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginTop="91dp"
+                                android:layout_marginEnd="2dp"
+                                android:layout_marginBottom="204dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Bautista Hospital"
+                                android:textSize="10dp"
+                                tools:ignore="TextSizeCheck" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt5"
+                                android:layout_width="114dp"
+                                android:layout_height="20dp"
+
+                                android:layout_alignStart="@+id/hotlines_img1"
+                                android:layout_alignEnd="@+id/hotlines_img1"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="157dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_marginBottom="141dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Hospital"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt6"
+                                android:layout_width="117dp"
+                                android:layout_height="22dp"
+                                android:layout_alignStart="@+id/hotlines_img1"
+                                android:layout_alignEnd="@+id/hotlines_img1"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="126dp"
+                                android:layout_marginEnd="2dp"
+                                android:layout_marginBottom="170dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="(046) 431-0416"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:id="@+id/hotlines_img1"
+                                android:layout_width="135dp"
+                                android:layout_height="65dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginEnd="13dp"
+                                android:layout_marginBottom="248dp"
+                                android:src="@drawable/bautista" />
+
+                            <Button
+                                android:id="@+id/button1"
+                                android:layout_width="146dp"
+                                android:layout_height="71dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="225dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="41dp"
+                                android:text="Call Now"
+                                android:textSize="10sp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/hotlines_card"
+                        android:layout_width="151dp"
+                        android:layout_height="318dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/medyowhite"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+                        app:layout_constraintBottom_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_max="wrap"
+                        app:layout_constraintHorizontal_bias="0.506"
+                        app:layout_constraintStart_toEndOf="@+id/hotlines_card1"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <RelativeLayout
+                            android:id="@+id/c3disaster_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:animationCache="true">
+
+                            <TextView
+                                android:id="@+id/Hotlines_txt"
+                                android:layout_width="121dp"
+                                android:layout_height="23dp"
+                                android:layout_alignStart="@+id/hotlines_img"
+                                android:layout_alignEnd="@+id/hotlines_img"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginTop="91dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginBottom="204dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Cavite Medical Center"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt4"
+                                android:layout_width="95dp"
+                                android:layout_height="20dp"
+
+                                android:layout_alignStart="@+id/hotlines_img"
+                                android:layout_alignEnd="@+id/hotlines_img"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="14dp"
+                                android:layout_marginTop="158dp"
+                                android:layout_marginEnd="13dp"
+                                android:layout_marginBottom="140dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Hospital"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt3"
+                                android:layout_width="114dp"
+                                android:layout_height="25dp"
+                                android:layout_alignStart="@+id/hotlines_img"
+                                android:layout_alignEnd="@+id/hotlines_img"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="124dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="169dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="0917-841-7302"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:id="@+id/hotlines_img"
+                                android:layout_width="135dp"
+                                android:layout_height="65dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginEnd="13dp"
+                                android:layout_marginBottom="248dp"
+                                android:src="@drawable/cavite_med" />
+
+                            <Button
+                                android:id="@+id/button"
+                                android:layout_width="146dp"
+                                android:layout_height="71dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="225dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="41dp"
+                                android:text="Call Now"
+                                android:textSize="10sp" />
+
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linear02"
+                    android:layout_width="332dp"
+                    android:layout_height="340dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintBottom_toTopOf="@id/linear03"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear01">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/hotlines_card2"
+                        android:layout_width="151dp"
+                        android:layout_height="318dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/medyowhite"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+                        app:layout_constraintBottom_toTopOf="@id/hotlines_card4"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_max="wrap"
+                        app:layout_constraintRight_toLeftOf="@id/hotlines_card3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/hotlines_card1">
+
+                        <RelativeLayout
+                            android:id="@+id/hotlineslayout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="318dp"
+                            android:animationCache="true">
+
+                            <TextView
+                                android:id="@+id/Hotlines_txt2"
+                                android:layout_width="120dp"
+                                android:layout_height="0dp"
+
+                                android:layout_alignStart="@+id/hotlines_img2"
+                                android:layout_alignEnd="@+id/hotlines_img2"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="76dp"
+                                android:layout_marginEnd="0dp"
+                                android:layout_marginBottom="196dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Cavite Naval Hospital"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt8"
+                                android:layout_width="98dp"
+                                android:layout_height="23dp"
+
+                                android:layout_alignStart="@+id/hotlines_img2"
+                                android:layout_alignEnd="@+id/hotlines_img2"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="11dp"
+                                android:layout_marginTop="159dp"
+                                android:layout_marginEnd="13dp"
+                                android:layout_marginBottom="136dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Hospital"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt7"
+                                android:layout_width="112dp"
+                                android:layout_height="16dp"
+
+                                android:layout_alignStart="@+id/hotlines_img2"
+                                android:layout_alignEnd="@+id/hotlines_img2"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="129dp"
+                                android:layout_marginEnd="7dp"
+                                android:layout_marginBottom="173dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="(046) 431-0469"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:id="@+id/hotlines_img2"
+                                android:layout_width="135dp"
+                                android:layout_height="65dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginEnd="13dp"
+                                android:layout_marginBottom="248dp"
+                                android:src="@drawable/cavite_naval" />
+
+                            <Button
+                                android:id="@+id/button2"
+                                android:layout_width="146dp"
+                                android:layout_height="71dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="225dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="41dp"
+                                android:text="Call Now"
+                                android:textSize="10sp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/hotlines_card3"
+                        android:layout_width="152dp"
+                        android:layout_height="318dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/medyowhite"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        android:layout_marginStart="10dp"
+                        app:cardElevation="2dp"
+                        app:layout_constraintBottom_toTopOf="@id/hotlines_card5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_max="wrap"
+                        app:layout_constraintHorizontal_bias="0.513"
+                        app:layout_constraintStart_toEndOf="@+id/hotlines_card2"
+                        app:layout_constraintTop_toBottomOf="@+id/hotlines_card">
+
+                        <RelativeLayout
+                            android:id="@+id/hotlineslayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="318dp"
+                            android:animationCache="true">
+
+                            <TextView
+                                android:id="@+id/Hotlines_txt3"
+                                android:layout_width="134dp"
+                                android:layout_height="18dp"
+                                android:layout_alignStart="@+id/hotlines_img3"
+                                android:layout_alignEnd="@+id/hotlines_img3"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="-6dp"
+                                android:layout_marginTop="78dp"
+                                android:layout_marginEnd="-5dp"
+                                android:layout_marginBottom="201dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Paanakan sa Cavite City"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt9"
+                                android:layout_width="80dp"
+                                android:layout_height="22dp"
+
+                                android:layout_alignStart="@+id/hotlines_img3"
+                                android:layout_alignEnd="@+id/hotlines_img3"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="23dp"
+                                android:layout_marginTop="158dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="138dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Lying-In Clinic"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt10"
+                                android:layout_width="112dp"
+                                android:layout_height="16dp"
+
+                                android:layout_alignStart="@+id/hotlines_img3"
+                                android:layout_alignEnd="@+id/hotlines_img3"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="113dp"
+                                android:layout_marginEnd="7dp"
+                                android:layout_marginBottom="168dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="0965-927-3598"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:id="@+id/hotlines_img3"
+                                android:layout_width="135dp"
+                                android:layout_height="65dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginEnd="13dp"
+                                android:layout_marginBottom="248dp"
+                                android:src="@drawable/paanakan_cavite" />
+
+                            <Button
+                                android:id="@+id/button3"
+                                android:layout_width="146dp"
+                                android:layout_height="71dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="226dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="40dp"
+                                android:text="Call Now"
+                                android:textSize="10sp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="332dp"
+                    android:layout_height="340dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linear02"
+                    app:layout_constraintBottom_toTopOf="@id/linear04"
+                    android:id="@+id/linear03">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/hotlines_card4"
+                        android:layout_width="152dp"
+                        android:layout_height="318dp"
+
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/medyowhite"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_max="wrap"
+                        app:layout_constraintBottom_toTopOf="@id/hotlines_card6"
+                        app:layout_constraintRight_toLeftOf="@id/hotlines_card5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/hotlines_card2">
+
+                        <RelativeLayout
+                            android:id="@+id/hotlineslayout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="318dp"
+                            android:animationCache="true">
+
+                            <TextView
+                                android:id="@+id/Hotlines_txt4"
+                                android:layout_width="134dp"
+                                android:layout_height="18dp"
+
+                                android:layout_alignStart="@+id/hotlines_img4"
+                                android:layout_alignEnd="@+id/hotlines_img4"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="-6dp"
+                                android:layout_marginTop="78dp"
+                                android:layout_marginEnd="-5dp"
+                                android:layout_marginBottom="201dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="CDRRMO"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt11"
+                                android:layout_width="80dp"
+                                android:layout_height="22dp"
+
+                                android:layout_alignStart="@+id/hotlines_txt112"
+                                android:layout_alignEnd="@+id/hotlines_txt112"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="169dp"
+                                android:layout_marginEnd="17dp"
+                                android:layout_marginBottom="127dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Responders"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt112"
+                                android:layout_width="112dp"
+                                android:layout_height="16dp"
+
+                                android:layout_alignStart="@+id/Hotlines_txt4"
+                                android:layout_alignEnd="@+id/Hotlines_txt4"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="11dp"
+                                android:layout_marginTop="123dp"
+                                android:layout_marginEnd="11dp"
+                                android:layout_marginBottom="158dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="(046)484-9600"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:id="@+id/hotlines_img4"
+                                android:layout_width="135dp"
+                                android:layout_height="65dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginEnd="13dp"
+                                android:layout_marginBottom="248dp"
+                                android:src="@drawable/cdrrmo_cavite" />
+
+                            <Button
+                                android:id="@+id/button4"
+                                android:layout_width="146dp"
+                                android:layout_height="71dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="225dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="41dp"
+                                android:text="Call Now"
+                                android:textSize="10sp" />
+
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/hotlines_card5"
+                        android:layout_width="152dp"
+                        android:layout_height="318dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/medyowhite"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_max="wrap"
+                        app:layout_constraintBottom_toTopOf="@id/hotlines_card7"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/hotlines_card4"
+                        app:layout_constraintTop_toBottomOf="@id/hotlines_card3">
+
+                        <RelativeLayout
+                            android:id="@+id/hotlineslayout4"
+                            android:layout_width="match_parent"
+                            android:layout_height="318dp"
+                            android:animationCache="true">
+
+                            <TextView
+                                android:id="@+id/Hotlines_txt5"
+                                android:layout_width="134dp"
+                                android:layout_height="18dp"
+
+                                android:layout_alignStart="@+id/hotlines_img5"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="-6dp"
+                                android:layout_marginTop="78dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="201dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Red Cross ERU"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt12"
+                                android:layout_width="80dp"
+                                android:layout_height="22dp"
+
+                                android:layout_alignStart="@+id/hotlines_txt113"
+                                android:layout_alignEnd="@+id/hotlines_txt113"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="170dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginBottom="126dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Responders"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt113"
+                                android:layout_width="112dp"
+                                android:layout_height="16dp"
+
+                                android:layout_alignStart="@+id/Hotlines_txt5"
+                                android:layout_alignEnd="@+id/Hotlines_txt5"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="11dp"
+                                android:layout_marginTop="123dp"
+                                android:layout_marginEnd="11dp"
+                                android:layout_marginBottom="158dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="(046)484-6266"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:id="@+id/hotlines_img5"
+                                android:layout_width="135dp"
+                                android:layout_height="65dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginEnd="13dp"
+                                android:layout_marginBottom="248dp"
+                                android:src="@drawable/red_cross_cavite" />
+
+                            <Button
+                                android:id="@+id/button5"
+                                android:layout_width="146dp"
+                                android:layout_height="71dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="225dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="41dp"
+                                android:text="Call Now"
+                                android:textSize="10sp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linear04"
+                    android:layout_width="332dp"
+                    android:layout_height="340dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@id/linear05"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.506"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear03">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/hotlines_card6"
+                        android:layout_width="152dp"
+                        android:layout_height="318dp"
+
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/medyowhite"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+                        app:layout_constraintEnd_toEndOf="@+id/hotlines_card4"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/imageView3">
+
+                        <RelativeLayout
+                            android:id="@+id/hotlineslayout5"
+                            android:layout_width="match_parent"
+                            android:layout_height="318dp"
+                            android:animationCache="true">
+
+                            <TextView
+                                android:id="@+id/Hotlines_txt6"
+                                android:layout_width="134dp"
+                                android:layout_height="18dp"
+                                android:layout_alignStart="@+id/hotlines_img6"
+                                android:layout_alignEnd="@+id/hotlines_img6"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="-6dp"
+                                android:layout_marginTop="78dp"
+                                android:layout_marginEnd="-5dp"
+                                android:layout_marginBottom="201dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Red Cross Office"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt13"
+                                android:layout_width="80dp"
+                                android:layout_height="22dp"
+
+                                android:layout_alignStart="@+id/hotlines_txt114"
+                                android:layout_alignEnd="@+id/hotlines_txt114"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="169dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="127dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Responders"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt114"
+                                android:layout_width="112dp"
+                                android:layout_height="16dp"
+
+                                android:layout_alignStart="@+id/Hotlines_txt6"
+                                android:layout_alignEnd="@+id/Hotlines_txt6"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="122dp"
+                                android:layout_marginEnd="11dp"
+                                android:layout_marginBottom="159dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="(046)431-0562"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:id="@+id/hotlines_img6"
+                                android:layout_width="135dp"
+                                android:layout_height="65dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginEnd="13dp"
+                                android:layout_marginBottom="248dp"
+                                android:src="@drawable/red_cross_cavite" />
+
+                            <Button
+                                android:id="@+id/button6"
+                                android:layout_width="146dp"
+                                android:layout_height="71dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="225dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="41dp"
+                                android:text="Call Now"
+                                android:textSize="10sp" />
+
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/hotlines_card7"
+                        android:layout_width="152dp"
+                        android:layout_height="318dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/medyowhite"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/imageView3">
+
+                        <RelativeLayout
+                            android:id="@+id/hotlineslayout6"
+                            android:layout_width="match_parent"
+                            android:layout_height="318dp"
+                            android:animationCache="true">
+
+                            <TextView
+                                android:id="@+id/Hotlines_txt7"
+                                android:layout_width="134dp"
+                                android:layout_height="18dp"
+                                android:layout_alignStart="@+id/hotlines_img7"
+                                android:layout_alignEnd="@+id/hotlines_img7"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="-5dp"
+                                android:layout_marginTop="79dp"
+                                android:layout_marginEnd="-5dp"
+                                android:layout_marginBottom="200dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Cavite City Chekpoint"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt14"
+                                android:layout_width="80dp"
+                                android:layout_height="22dp"
+
+                                android:layout_alignStart="@+id/hotlines_txt115"
+                                android:layout_alignEnd="@+id/hotlines_txt115"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="18dp"
+                                android:layout_marginTop="170dp"
+                                android:layout_marginEnd="13dp"
+                                android:layout_marginBottom="126dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Responders"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt115"
+                                android:layout_width="112dp"
+                                android:layout_height="16dp"
+
+                                android:layout_alignStart="@+id/Hotlines_txt7"
+                                android:layout_alignEnd="@+id/Hotlines_txt7"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="124dp"
+                                android:layout_marginEnd="11dp"
+                                android:layout_marginBottom="157dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="(046)431-2465"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:id="@+id/hotlines_img7"
+                                android:layout_width="135dp"
+                                android:layout_height="65dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginEnd="13dp"
+                                android:layout_marginBottom="248dp"
+                                android:src="@drawable/checkpoint_cavite" />
+
+                            <Button
+                                android:id="@+id/button7"
+                                android:layout_width="146dp"
+                                android:layout_height="71dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="225dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="41dp"
+                                android:text="Call Now"
+                                android:textSize="10sp" />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="332dp"
+                    android:layout_height="340dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear04"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:id="@+id/linear05">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/hotlines_card8"
+                        android:layout_width="152dp"
+                        android:layout_height="318dp"
+                        android:layout_marginTop="16dp"
+
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/medyowhite"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+
+                        app:layout_constraintEnd_toEndOf="@+id/hotlines_card6"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/hotlines_card6"
+                        app:layout_constraintTop_toTopOf="@+id/imageView3">
+
+                        <RelativeLayout
+                            android:id="@+id/hotlineslayout7"
+                            android:layout_width="match_parent"
+                            android:layout_height="318dp"
+                            android:animationCache="true">
+
+                            <TextView
+                                android:id="@+id/Hotlines_txt8"
+                                android:layout_width="134dp"
+                                android:layout_height="18dp"
+
+                                android:layout_alignStart="@+id/hotlines_img8"
+                                android:layout_alignEnd="@+id/hotlines_img8"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="-7dp"
+                                android:layout_marginTop="79dp"
+                                android:layout_marginEnd="-5dp"
+                                android:layout_marginBottom="200dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="PNP Cavite City"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt15"
+                                android:layout_width="80dp"
+                                android:layout_height="22dp"
+
+                                android:layout_alignStart="@+id/hotlines_txt116"
+                                android:layout_alignEnd="@+id/hotlines_txt116"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="170dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginBottom="126dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Police Station"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt116"
+                                android:layout_width="112dp"
+                                android:layout_height="16dp"
+
+                                android:layout_alignStart="@+id/Hotlines_txt8"
+                                android:layout_alignEnd="@+id/Hotlines_txt8"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="11dp"
+                                android:layout_marginTop="124dp"
+                                android:layout_marginEnd="11dp"
+                                android:layout_marginBottom="157dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="0906-360-6656"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:id="@+id/hotlines_img8"
+                                android:layout_width="135dp"
+                                android:layout_height="65dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginEnd="13dp"
+                                android:layout_marginBottom="248dp"
+                                android:src="@drawable/pnp_cavite" />
+
+                            <Button
+                                android:id="@+id/button8"
+                                android:layout_width="146dp"
+                                android:layout_height="71dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="225dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="41dp"
+                                android:text="Call Now"
+                                android:textSize="10sp" />
+
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/hotlines_card9"
+                        android:layout_width="152dp"
+                        android:layout_height="318dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/medyowhite"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/imageView3">
+
+                        <RelativeLayout
+                            android:id="@+id/hotlineslayout8"
+                            android:layout_width="match_parent"
+                            android:layout_height="318dp"
+                            android:animationCache="true">
+
+                            <TextView
+                                android:id="@+id/Hotlines_txt9"
+                                android:layout_width="134dp"
+                                android:layout_height="18dp"
+
+                                android:layout_alignStart="@+id/hotlines_img9"
+                                android:layout_alignEnd="@+id/hotlines_img9"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="-7dp"
+                                android:layout_marginTop="75dp"
+                                android:layout_marginEnd="-4dp"
+                                android:layout_marginBottom="204dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="BFP Cavite City"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt16"
+                                android:layout_width="80dp"
+                                android:layout_height="22dp"
+
+                                android:layout_alignStart="@+id/hotlines_txt117"
+                                android:layout_alignEnd="@+id/hotlines_txt117"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="170dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginBottom="126dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="Fire Station"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/hotlines_txt117"
+                                android:layout_width="112dp"
+                                android:layout_height="16dp"
+
+                                android:layout_alignStart="@+id/Hotlines_txt9"
+                                android:layout_alignEnd="@+id/Hotlines_txt9"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="11dp"
+                                android:layout_marginTop="124dp"
+                                android:layout_marginEnd="11dp"
+                                android:layout_marginBottom="157dp"
+                                android:fontFamily="@font/mmbold"
+                                android:gravity="center"
+                                android:text="(046)431-0308"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:id="@+id/hotlines_img9"
+                                android:layout_width="135dp"
+                                android:layout_height="65dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginEnd="13dp"
+                                android:layout_marginBottom="248dp"
+                                android:src="@drawable/bfp_cavite" />
+
+                            <Button
+                                android:id="@+id/button9"
+                                android:layout_width="146dp"
+                                android:layout_height="71dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="225dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="41dp"
+                                android:text="Call Now"
+                                android:textSize="10sp" />
+
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
