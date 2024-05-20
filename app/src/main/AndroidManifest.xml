@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-<uses-permission
-    android:name="android.permission.CALL_PHONE"/>
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
 
-<uses-permission
-    android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
-
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +23,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Safeguide1"
         tools:targetApi="31">
-
+        <activity
+            android:name=".maps.MapsActivity"
+            android:exported="false" />
         <activity
             android:name=".start_up"
             android:exported="false" />
@@ -40,6 +46,18 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- Situm SDK credentials -->
+        <meta-data
+            android:name="es.situm.sdk.API_USER"
+            android:value="jayveejimenez32@gmail.com" />
+        <meta-data
+            android:name="es.situm.sdk.API_KEY"
+            android:value="2219cfcb2c7b16d92c654c42bcf08b2641a36f3ad97d24477d8f7c93373d5eae" /> <!-- GMaps api key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD_lUuMu-qNcEWP8vJMTyB5D7aktH3xc-I" />
     </application>
 
 </manifest>

@@ -17,7 +17,7 @@
     <string name="Paragraph_3">Remember, preparation is essential. Stay informed, plan  ahead, and utilize our app as a resource to help you prepare for any emergency.</string>
 
 
-<string-array name="itemTexts">
+    <string-array name="itemTexts">
         <item>Item 1</item>
         <item>Item 2</item>
         <item>Item 3</item>

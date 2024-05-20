@@ -10,9 +10,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.safeguide1.maps.MapsActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
@@ -75,8 +77,7 @@ public class main_dash extends AppCompatActivity implements manualvids.OnManualV
                         setTitle("Emergency Go Bag");
                         break;
                     case R.id.nav_univ_map:
-                        replaceFragment(new EvacMapFragment(), "EvacMapFragment");
-                        setTitle("Evacuation Map");
+                        startActivity(new Intent(main_dash.this, MapsActivity.class));
                         break;
                     case R.id.nav_info_about:
                         replaceFragment(new AboutUsFragment(), "AboutUsFragment");
