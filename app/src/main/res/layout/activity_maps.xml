@@ -13,9 +13,7 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="5dp">
+        android:layout_height="match_parent">
 
         <es.situm.sdk.wayfinding.MapView
             android:id="@+id/exampleMapView"
@@ -24,13 +22,14 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/recenter_button"
-            android:layout_width    ="wrap_content"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/mylocation"
             android:backgroundTint="@color/green_100"
             android:layout_alignParentEnd="true"
+            android:layout_marginBottom="120dp"
+            android:layout_marginEnd="20dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="40dp"
             android:contentDescription="current location" />
     </RelativeLayout>
 
