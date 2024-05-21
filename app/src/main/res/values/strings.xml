@@ -20,6 +20,8 @@
     <string name="about_us_paragraph3"> For more information or support, please reach out to our Safeguide team at app.safeguide@gmail.com or visit our office at the Department of Information and Technology.</string>
     <string name="about_us_paragraph2"> Safeguide is specifically developed with the needs of Cavite State University - Cavite City Campus in mind. Our localized approach ensures that all information and resources are relevant and actionable for our community. By leveraging technology, Safeguide aims to build a culture of preparedness and resilience, empowering each individual to act effectively in the face of disaster.</string>
 
+
+
     <string-array name="itemTexts">
         <item>Item 1</item>
         <item>Item 2</item>

@@ -8,30 +8,30 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
+        android:id="@+id/greenconstraint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/greenconstraint">
+        android:layout_height="match_parent">
 
         <!-- Header Image and Title -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="227dp"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="227dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/newgreen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/basta_taas"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:id="@+id/newgreen"
-                android:background="@drawable/basta_taas">
+                app:layout_constraintTop_toTopOf="parent">
 
 
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -127,14 +127,14 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
                     android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@color/medyowhite"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="8dp"
-                    android:layout_marginBottom="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toTopOf="@id/go"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/prepare">
 
