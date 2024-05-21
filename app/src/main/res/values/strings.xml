@@ -16,8 +16,15 @@
     <string name="Paragraph_2">However, it is important to understand that the application alone cannot save lives. Instead, it provides users with information and direction to help them make informed decisions and take appropriate action in times of crisis.</string>
     <string name="Paragraph_3">Remember, preparation is essential. Stay informed, plan  ahead, and utilize our app as a resource to help you prepare for any emergency.</string>
 
+ ced
+    <string name="about_us_paragraph1"> Safeguide is designed to ensure the safety and preparedness of students, faculty, staff, and visitors at Cavite State University - Cavite City Campus. Our mission is to provide timely information, practical resources, and essential tools to help our campus community effectively prepare for and respond to various types of disasters.</string>
+    <string name="about_us_paragraph3"> For more information or support, please reach out to our Safeguide team at app.safeguide@gmail.com or visit our office at the Department of Information and Technology.</string>
+    <string name="about_us_paragraph2"> Safeguide is specifically developed with the needs of Cavite State University - Cavite City Campus in mind. Our localized approach ensures that all information and resources are relevant and actionable for our community. By leveraging technology, Safeguide aims to build a culture of preparedness and resilience, empowering each individual to act effectively in the face of disaster.</string>
+<string-array name="itemTexts">
+
 
     <string-array name="itemTexts">
+ main
         <item>Item 1</item>
         <item>Item 2</item>
         <item>Item 3</item>
