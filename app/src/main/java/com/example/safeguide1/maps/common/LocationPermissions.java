@@ -26,9 +26,7 @@ public class LocationPermissions {
         String[] permissions;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
             permissions = new String[]{
-                    Manifest.permission.ACCESS_FINE_LOCATION,
-                    Manifest.permission.BLUETOOTH_SCAN,
-                    Manifest.permission.BLUETOOTH_CONNECT
+                    Manifest.permission.ACCESS_FINE_LOCATION
             };
         } else {
             permissions = new String[]{Manifest.permission.ACCESS_FINE_LOCATION};
