@@ -1,21 +1,37 @@
 package com.example.safeguide1;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.LeadingMarginSpan;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class start_up extends AppCompatActivity {
+
+    private static final String PREFS_NAME = "MyPrefsFile";
+    private static final String KEY_FIRST_TIME = "first_time";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Check if it's the first time the app is opened
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        boolean firstTime = settings.getBoolean(KEY_FIRST_TIME, true);
+
+        if (!firstTime) {
+            // If not the first time, go directly to main_dash
+            proceedToHomePage();
+            return;
+        }
+
+        // Otherwise, show the start_up activity
         setContentView(R.layout.activity_start_up);
 
         TextView textView1 = findViewById(R.id.textViewDescription1);
@@ -40,9 +56,20 @@ public class start_up extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(start_up.this, main_dash.class));
+                // Mark the app as opened before
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putBoolean(KEY_FIRST_TIME, false);
+                editor.apply();
+
+                // Proceed to main_dash activity
+                proceedToHomePage();
             }
         });
+    }
+
+    private void proceedToHomePage() {
+        startActivity(new Intent(start_up.this, main_dash.class));
+        finish();
     }
 
     // Method to apply indentation to the first sentence of a paragraph
@@ -58,4 +85,3 @@ public class start_up extends AppCompatActivity {
         return spannableString;
     }
 }
-
