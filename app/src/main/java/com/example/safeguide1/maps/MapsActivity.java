@@ -103,9 +103,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         MapViewConfiguration configuration = new MapViewConfiguration.Builder()
                 .setBuildingIdentifier(BUILDING_ID).build();
 
+
         mapView.load(configuration, new MapView.MapViewCallback() {
             @Override
             public void onLoad(@NonNull MapViewController mapViewController) {
+
             }
 
             @Override
