@@ -32,6 +32,10 @@ public class lec_terrorism extends Fragment {
         slideModels.add(new SlideModel(R.drawable.step3terrorism, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.step4terrorism, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.step5terrorism, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.step1bombthreat, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.step2bombthreat, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.step3bombthreat, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.step4bombthreat, ScaleTypes.FIT));
 
         imageSlider.setImageList(slideModels, ScaleTypes.FIT);
         return view;
