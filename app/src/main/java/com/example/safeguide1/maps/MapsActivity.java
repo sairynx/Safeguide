@@ -4,12 +4,9 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
-import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -35,10 +32,13 @@ import es.situm.sdk.location.LocationRequest;
 import es.situm.sdk.location.LocationStatus;
 import es.situm.sdk.location.RouteAdjustment;
 import es.situm.sdk.location.util.CoordinateConverter;
+import es.situm.sdk.model.cartography.BuildingInfo;
 import es.situm.sdk.model.cartography.Poi;
 import es.situm.sdk.model.cartography.Point;
 import es.situm.sdk.model.directions.Route;
+import es.situm.sdk.model.directions.RouteSegment;
 import es.situm.sdk.model.location.Coordinate;
+import es.situm.sdk.model.location.Location;
 import es.situm.sdk.model.navigation.NavigationProgress;
 import es.situm.sdk.navigation.NavigationListener;
 import es.situm.sdk.navigation.NavigationRequest;
@@ -58,10 +58,19 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private GoogleMap map;
     private LocationManager locationManager;
     private LocationListener locationListener;
-    private es.situm.sdk.model.location.Location current;
+    private Location current;
     private static final int ACCESS_FINE_LOCATION_REQUEST_CODE = 3096;
     private static final int PERMISSION_REQUEST_CODE = 1000;
     private static final int REQUEST_BLUETOOTH_PERMISSIONS = 1;
+
+
+    private static final Coordinate targetCoordinate =
+            new Coordinate(14.458636871569135, 120.88059656903548);
+    private static final String targetFloorId = "52593";
+
+    private boolean isNavigating = false;
+    // To store the building information after we retrieve it
+    private BuildingInfo buildingInformation = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,10 +113,54 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
-        setup();
+
+
+            setup();
+
 
     }
 
+    private void startNavigation(Location location){
+
+        SitumSdk.navigationManager().removeUpdates();
+
+        CoordinateConverter coordinateConverter = new CoordinateConverter(buildingInformation.getBuilding().getDimensions(), buildingInformation.getBuilding().getCenter(), buildingInformation.getBuilding().getRotation());
+
+        Point pointB = new Point(BUILDING_ID, targetFloorId, targetCoordinate, coordinateConverter.toCartesianCoordinate(targetCoordinate));
+
+        Coordinate coordinateA = new Coordinate(location.getCoordinate().getLatitude(), location.getCoordinate().getLongitude());
+        Point pointA = new Point(location.getBuildingIdentifier(), location.getFloorIdentifier(), coordinateA, coordinateConverter.toCartesianCoordinate(coordinateA) );
+
+         DirectionsRequest directionsRequest = new DirectionsRequest.Builder().from(pointA, null).to(pointB).build();
+
+        SitumSdk.directionsManager().requestDirections(directionsRequest, new Handler<Route>() {
+            @Override
+            public void onSuccess(Route route) {
+
+                // When the route is computed, we configure the NavigationRequest
+                NavigationRequest navigationRequest = new NavigationRequest.Builder().
+                                route(route).
+                                distanceToGoalThreshold(10).
+                                outsideRouteThreshold(10).
+                                ignoreLowQualityLocations(true).
+                        timeToIgnoreUnexpectedFloorChanges(1000).
+                        build();
+
+                // We start the navigation with this NavigationRequest,
+                // which allows us to receive updates while the user moves along the route
+                SitumSdk.navigationManager().requestNavigationUpdates(navigationRequest,  navigationListener);
+
+                isNavigating=true;
+                Log.i(TAG, "Navigating!");
+            }
+
+            @Override
+            public void onFailure(Error error) {
+                Log.e(TAG, "Error" + error);
+            }
+        });
+
+    }
 
     private void setup(){
         FloatingActionButton button = findViewById(R.id.recenter_button);
@@ -120,11 +173,46 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }else {
                 startLocation();
             }
+            isNavigating = true;
         });
 
     }
 
-
+    private NavigationListener navigationListener = new NavigationListener() {
+        @Override
+        public void onDestinationReached() {
+            Log.i(TAG, "Destination Reached");
+            isNavigating = false;
+            SitumSdk.navigationManager().removeUpdates();
+        }
+        @Override
+        public void onProgress(NavigationProgress navigationProgress) {
+            Log.i(TAG, "Route advances");
+            Log.i(TAG, "Current indication " + navigationProgress.getCurrentIndication().toText(MapsActivity.this));
+            Log.i(TAG, "Next indication " + navigationProgress.getNextIndication().toText(MapsActivity.this));
+            Log.i(TAG, "");
+            Log.i(TAG, " Distance to goal: " + navigationProgress.getDistanceToGoal());
+            Log.i(TAG, " Time to goal: " + navigationProgress.getTimeToGoal());
+            Log.i(TAG, " Closest location in route: " + navigationProgress.getClosestLocationInRoute());
+            Log.i(TAG, " Distance to closest location in route: " + navigationProgress.getDistanceToClosestPointInRoute());
+            Log.i(TAG, "");
+            Log.i(TAG, " Remaining segments: ");
+            for (RouteSegment segment: navigationProgress.getSegments()){
+                Log.i(TAG, "   Floor Id: " + segment.getFloorIdentifier());
+                for (Point point: segment.getPoints()){
+                    Log.i(TAG, "    Point: BuildingId "+ point.getFloorIdentifier() + " FloorId " + point.getFloorIdentifier() + " Latitude "+ point.getCoordinate().getLatitude() + " Longitude " + point.getCoordinate().getLongitude());
+                }
+                Log.i(TAG, "    ----");
+            }
+            Log.i(TAG, "--------");
+        }
+        @Override
+        public void onUserOutsideRoute() {
+            Log.i(TAG, "User outside of route");
+            isNavigating=false;
+            SitumSdk.navigationManager().removeUpdates();
+        }
+    };
     private void startLocation(){
         if(locationManager.isRunning()){
             return;
@@ -132,11 +220,17 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         locationListener = new LocationListener() {
             @Override
-            public void onLocationChanged(@NonNull es.situm.sdk.model.location.Location location) {
+            public void onLocationChanged(@NonNull Location location) {
                 current = location;
 
                 map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(current.getCoordinate().getLatitude(), current.getCoordinate().getLongitude()), 16));
                 Log.d(TAG, "Current location: " + current.getCoordinate().getLatitude() + ", " + current.getCoordinate().getLongitude());
+                if (isNavigating) {
+                    SitumSdk.navigationManager().updateWithLocation(location);
+                }
+                else {
+                    startNavigation(location);
+                }
             }
 
             @Override
@@ -162,6 +256,25 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 .build();
 
         locationManager.requestLocationUpdates(locationRequest, locationListener);
+
+        SitumSdk.communicationManager().fetchBuildingInfo(BUILDING_ID, new Handler<BuildingInfo>() {
+            @Override
+            public void onSuccess(BuildingInfo buildingInfo) {
+                buildingInformation = buildingInfo;
+                LocationRequest locationRequest = new LocationRequest.Builder().
+                        useWifi(true).useBle(true).
+                        buildingIdentifier("10194").
+                        build();
+                SitumSdk.locationManager().
+                        requestLocationUpdates(locationRequest, locationListener);
+
+            }
+
+            @Override
+            public void onFailure(Error error) {
+
+            }
+        });
     }
     private void stopLocation(){
         if(locationListener!=null){
