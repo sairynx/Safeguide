@@ -92,9 +92,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="20dp"/>
 
-<!--            -->
-            <!--            -->
-            <!--            -->
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -658,18 +656,6 @@
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         </LinearLayout>

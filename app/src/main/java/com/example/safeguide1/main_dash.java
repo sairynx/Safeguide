@@ -127,9 +127,7 @@ public class main_dash extends AppCompatActivity implements manualvids.OnManualV
     @Override
     public void onBackPressed() {
         Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
-        if (currentFragment instanceof manualvids) {
-            onManualVidsBackPressed();
-        } else if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+       if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else if (fragmentBackStack.size() > 3) {
             fragmentBackStack.remove(fragmentBackStack.size() - 1);
