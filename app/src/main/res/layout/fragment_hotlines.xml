@@ -188,7 +188,7 @@
                                 android:layout_marginTop="24dp"
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginBottom="235dp"
-                                android:src="@drawable/bautista" />
+                                android:src="@drawable/hotlines_hospital" />
 
                             <Button
                                 android:id="@+id/button1"
@@ -299,7 +299,7 @@
                                 android:layout_marginTop="24dp"
                                 android:layout_marginEnd="8dp"
                                 android:layout_marginBottom="235dp"
-                                android:src="@drawable/cavite_med" />
+                                android:src="@drawable/hotlines_hospital" />
 
                             <Button
                                 android:id="@+id/button"
@@ -427,7 +427,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="13dp"
                                 android:layout_marginBottom="248dp"
-                                android:src="@drawable/cavite_naval" />
+                                android:src="@drawable/hotlines_hospital" />
 
                             <Button
                                 android:id="@+id/button2"
@@ -539,7 +539,7 @@
                                 android:layout_marginTop="8dp"
                                 android:layout_marginEnd="13dp"
                                 android:layout_marginBottom="248dp"
-                                android:src="@drawable/paanakan_cavite" />
+                                android:src="@drawable/clinic1" />
 
                             <Button
                                 android:id="@+id/button3"
@@ -661,7 +661,7 @@
                                 android:layout_marginTop="8dp"
                                 android:layout_marginEnd="13dp"
                                 android:layout_marginBottom="248dp"
-                                android:src="@drawable/cdrrmo_cavite" />
+                                android:src="@drawable/responders" />
 
                             <Button
                                 android:id="@+id/button4"
@@ -771,7 +771,7 @@
                                 android:layout_marginTop="11dp"
                                 android:layout_marginEnd="13dp"
                                 android:layout_marginBottom="248dp"
-                                android:src="@drawable/red_cross_cavite" />
+                                android:src="@drawable/responders" />
 
                             <Button
                                 android:id="@+id/button5"
@@ -892,7 +892,7 @@
                                 android:layout_marginTop="7dp"
                                 android:layout_marginEnd="13dp"
                                 android:layout_marginBottom="248dp"
-                                android:src="@drawable/red_cross_cavite" />
+                                android:src="@drawable/responders" />
 
                             <Button
                                 android:id="@+id/button6"
@@ -998,7 +998,7 @@
                                 android:layout_marginTop="8dp"
                                 android:layout_marginEnd="13dp"
                                 android:layout_marginBottom="248dp"
-                                android:src="@drawable/checkpoint_cavite" />
+                                android:src="@drawable/checkpointcc" />
 
                             <Button
                                 android:id="@+id/button7"
@@ -1119,7 +1119,7 @@
                                 android:layout_marginTop="7dp"
                                 android:layout_marginEnd="13dp"
                                 android:layout_marginBottom="248dp"
-                                android:src="@drawable/pnp_cavite" />
+                                android:src="@drawable/police" />
 
                             <Button
                                 android:id="@+id/button8"
@@ -1228,7 +1228,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="13dp"
                                 android:layout_marginBottom="248dp"
-                                android:src="@drawable/bfp_cavite" />
+                                android:src="@drawable/firestation" />
 
                             <Button
                                 android:id="@+id/button9"
