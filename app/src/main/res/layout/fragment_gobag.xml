@@ -99,13 +99,6 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/btnImport"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Import" />
-
-                    <Button
                         android:id="@+id/btnAdd"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -122,12 +115,23 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Delete"
+                        android:text="Drinking Water\nFood\nClothes\nFlashlight\nWhistle\nBatteries\nLighter\nRadio\nPocket Knife\nEmergency Blanket\nPrescribed Medicines\nGlasses\nID\nFamily Contacts\nGloves\nFace Mask\nPlastic Bags\nToilet Papers\nHand Sanitizer\nCooking Tools/Fuel\nSanitary Gloves\nRope\nDisinfecting Wipes\nAnti-Diarrhea\nPain Reliever"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="15sp"
+                        android:lineSpacingExtra="10dp"
+                        android:fontFamily="@font/mmedium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Custom Added Items"
                         android:textColor="@color/black"
                         android:layout_marginLeft="8dp"
                         android:textSize="17.3sp"
                         android:textStyle="bold"
-                        android:fontFamily="@font/mmedium" />
+                        android:fontFamily="@font/mmedium"
+                        android:layout_marginTop="30dp"/>
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recyclerViewMyBag"

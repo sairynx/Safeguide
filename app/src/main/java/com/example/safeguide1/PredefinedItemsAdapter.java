@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
@@ -26,9 +28,9 @@ public class PredefinedItemsAdapter extends RecyclerView.Adapter<PredefinedItems
 
     public PredefinedItemsAdapter(ArrayList<String> predefinedItems, OnAddItemListener onAddItemListener, DatabaseHelper databaseHelper) {
         this.predefinedItems = predefinedItems;
-        this.onAddItemListener = onAddItemListener;
+
         this.databaseHelper = databaseHelper;
-        this.checkedItems = new SparseBooleanArray();
+
     }
 
 
@@ -42,15 +44,7 @@ public class PredefinedItemsAdapter extends RecyclerView.Adapter<PredefinedItems
     @Override
     public void onBindViewHolder(@NonNull PredefinedItemViewHolder holder, int position) {
         String item = predefinedItems.get(position);
-        holder.checkBoxItem.setText(item);
-        holder.checkBoxItem.setChecked(checkedItems.get(position, false));
-        holder.checkBoxItem.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (isChecked) {
-                databaseHelper.addItem(item); // Ensure databaseHelper is not null
-            } else {
-                databaseHelper.deleteItem(item);
-            }
-        });
+        holder.textViewItem.setText(item);
     }
 
     @Override
@@ -59,11 +53,11 @@ public class PredefinedItemsAdapter extends RecyclerView.Adapter<PredefinedItems
     }
 
     public static class PredefinedItemViewHolder extends RecyclerView.ViewHolder {
-        CheckBox checkBoxItem;
+        TextView textViewItem;
 
         public PredefinedItemViewHolder(@NonNull View itemView) {
             super(itemView);
-            checkBoxItem = itemView.findViewById(R.id.checkBoxItem);
+            textViewItem = itemView.findViewById(R.id.textViewItem);
         }
     }
 }
