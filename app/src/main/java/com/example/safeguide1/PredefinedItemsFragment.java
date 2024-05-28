@@ -21,7 +21,7 @@ public class PredefinedItemsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_predefined_items, container, false);
 
-        recyclerViewPredefinedItems = view.findViewById(R.id.recyclerViewPredefinedItems);
+        recyclerViewPredefinedItems = view.findViewById(R.id.recyclerViewDefaultItems);
 
         predefinedItems = new ArrayList<>();
         predefinedItems.add("Drinking Water");
@@ -32,14 +32,13 @@ public class PredefinedItemsFragment extends Fragment {
         predefinedItems.add("Glasses");
         predefinedItems.add("ID");
         predefinedItems.add("Family Contacts");
-        predefinedItems.add("Rain Poncho");
+        predefinedItems.add("Clothes");
         predefinedItems.add("Gloves");
         predefinedItems.add("Face Mask");
         predefinedItems.add("Radio");
         predefinedItems.add("Flashlight");
-        predefinedItems.add("Powerbank");
+        predefinedItems.add("Power bank");
         predefinedItems.add("Whistle");
-        predefinedItems.add("Lightstick");
         predefinedItems.add("Batteries");
         predefinedItems.add("Plastic Bags");
         predefinedItems.add("Toilet Papers");

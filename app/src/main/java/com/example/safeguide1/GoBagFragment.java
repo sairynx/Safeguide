@@ -1,20 +1,11 @@
 package com.example.safeguide1;
 
-import android.content.ContentValues;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.EditorInfo;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,18 +13,14 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 
 public class GoBagFragment extends Fragment {
 
     private RecyclerView recyclerViewMyBag;
-    private Button btnImport, btnAdd;
-    private GoBagAdapter GoBagAdapter;
-    private ArrayList<String> GoBagItems;
+    private Button btnAdd;
+    private GoBagAdapter goBagAdapter;
+    private ArrayList<String> goBagItems;
     private DatabaseHelper databaseHelper;
 
     @Override
@@ -41,27 +28,16 @@ public class GoBagFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_gobag, container, false);
 
         recyclerViewMyBag = view.findViewById(R.id.recyclerViewMyBag);
-        btnImport = view.findViewById(R.id.btnImport);
         btnAdd = view.findViewById(R.id.btnAdd);
 
         databaseHelper = new DatabaseHelper(getContext());
-        GoBagItems = databaseHelper.getAllItems();
-        GoBagAdapter = new GoBagAdapter(GoBagItems, databaseHelper);
+        goBagItems = databaseHelper.getAllItems();
+        goBagAdapter = new GoBagAdapter(goBagItems, databaseHelper);
         recyclerViewMyBag.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerViewMyBag.setAdapter(GoBagAdapter);
+        recyclerViewMyBag.setAdapter(goBagAdapter);
 
-        btnImport.setOnClickListener(v -> openPredefinedItemsFragment());
         btnAdd.setOnClickListener(v -> showAddItemDialog());
-
         return view;
-    }
-
-    private void openPredefinedItemsFragment() {
-        Fragment predefinedItemsFragment = new PredefinedItemsFragment();
-        getParentFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, predefinedItemsFragment)
-                .addToBackStack(null)
-                .commit();
     }
 
     private void showAddItemDialog() {
@@ -75,8 +51,8 @@ public class GoBagFragment extends Fragment {
             String newItem = input.getText().toString();
             if (!newItem.isEmpty()) {
                 databaseHelper.addItem(newItem);
-                GoBagItems.add(newItem);
-                GoBagAdapter.notifyItemInserted(GoBagItems.size() - 1);
+                goBagItems.add(newItem);
+                goBagAdapter.notifyItemInserted(goBagItems.size() - 1);
             }
         });
 
@@ -84,7 +60,4 @@ public class GoBagFragment extends Fragment {
 
         builder.show();
     }
-
 }
-
-
